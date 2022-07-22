@@ -19,5 +19,5 @@ Also, this will only work on server side. So if you require it inside a shared f
 
 ## Credits
 
-- [WilliamVenner](https://github.com/WilliamVenner) - Making gmod-rs. Digging through his endless Gmod Rust DLL repos in order to understand how gmod-rs works.
+- [WilliamVenner](https://github.com/WilliamVenner) - Making gmod-rs. Digging through his endless Gmod Rust DLL repos in order to understand how gmod-rs works. I also stole his build action, sue me.
 - [dotenv-parser](https://github.com/rubik/dotenv-parser) - Parsing the .env file. Because why make something yourself when someone has already done it better?
