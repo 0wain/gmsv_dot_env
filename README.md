@@ -13,8 +13,8 @@ Also, this will only work on server side. So if you require it inside a shared f
 1. Place the dll in `./garrysmod/lua/bin`.
 2. Create a `.env` file at `./garrysmod/.env`.
 3. Populate the .env file with an appropriate config.
-4. Go to a config file and require the DLL at the top of the file: `if SERVER then require('dot_env) end`
-5. Set the config value using the `env()` function: `MyAddon.Config.SQL.Password = env('MY_ADDON_SQL_PASSWORD) or "password"`.
+4. Go to a config file and require the DLL at the top of the file: `if SERVER then require('dot_env') end`
+5. Set the config value using the `env()` function: `MyAddon.Config.SQL.Password = env('MY_ADDON_SQL_PASSWORD') or "password"`.
 6. If you are using this in a shared context, you may need to account for that like so: `MyAddon.Config.SharedValue = SERVER and (env('MY_ADDON_SHARED_VAL') or "Fallback") or "Client Fallback"`, but it is unlikely you would be using this in a shared context.
 
 ## Credits
