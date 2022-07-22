@@ -7,7 +7,7 @@ extern crate gmod;
 
 unsafe extern "C-unwind" fn read_env(lua: gmod::lua::State) -> i32 {
     let contents = fs::read_to_string("./garrysmod/.env")
-        .expect("Something went wrong reading the file");
+        .expect("./garrysmod/.env does not seem to exist");
 
     let env_vars = parse_dotenv(&String::from(contents)).unwrap();
     let lookup_var = String::from(lua.check_string(1));
