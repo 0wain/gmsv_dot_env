@@ -9,8 +9,8 @@ unsafe extern "C-unwind" fn read_env(lua: gmod::lua::State) -> i32 {
     let contents = fs::read_to_string("./garrysmod/.env")
         .expect("./garrysmod/.env does not seem to exist");
 
-    let env_vars = parse_dotenv(&String::from(contents)).unwrap();
-    let lookup_var = String::from(lua.check_string(1));
+    let env_vars = parse_dotenv(&contents).unwrap();
+    let lookup_var = lua.check_string(1).into_owned();
 
     if env_vars.contains_key(&lookup_var) {
         let desired_var = &env_vars[&lookup_var];
@@ -33,6 +33,6 @@ pub unsafe extern "C-unwind" fn gmod13_open(lua: gmod::lua::State) -> i32 {
 }
 
 #[gmod13_close]
-fn gmod13_close(lua: gmod::lua::State) -> i32 {
+fn gmod13_close(_lua: gmod::lua::State) -> i32 {
     return 0;
 }
