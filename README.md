@@ -2,7 +2,7 @@
 
 A not-so-true-to-life implementation of a .env file for gmod. Place a .env at `./garrysmod/.env` and any variables set in it will be accessible from within Lua through the `env()` function. The file will require you to run `require("dot_env")` at the top of a config file.
 
-This does not respect ENVIRONMENT_VARIABLES defined outside of the .env. My intentions were (And always will be) to keep the context of the variables tight and strict, so they are only creatable through the .env file.
+This does not respect ENVIRONMENT_VARIABLES defined outside of the .env. ~My intentions were (And always will be) to keep the context of the variables tight and strict, so they are only creatable through the .env file.~ I change my mind (I was an idiot then), if you want to add this functionality please open a PR!
 
 Also, this will only work on server side. So if you require it inside a shared file, make sure to account for that.
 
